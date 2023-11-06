@@ -182,12 +182,12 @@ namespace cwiczenia5
             int kolumny = Convert.ToInt32(Console.ReadLine());
 
             int[,] macierz = new int[wiersze, kolumny];
-            for (int i = 0; i < wiersze; i++)
+            for (int i = 1; i < wiersze + 1; i++)
             {
-                for (int j = 0; j < kolumny; j++)
+                for (int j = 1; j < kolumny + 1; j++)
                 {
                     Console.Write("Podaj element [{0},{1}] macierzy: ", i, j);
-                    macierz[i, j] = Convert.ToInt32(Console.ReadLine());
+                    macierz[i - 1, j - 1] = Convert.ToInt32(Console.ReadLine());
                 }
             }
 
@@ -319,7 +319,7 @@ namespace cwiczenia5
             WyswietlTablice(tablica);
         }
 
-        static void SortowanieOdNajwiekszego(int[] tablica)
+        static void SortujOdNajwiekszego(int[] tablica)
         {
             int n = tablica.Length;
             for (int i = 0; i < n - 1; i++)
@@ -346,7 +346,7 @@ namespace cwiczenia5
             Console.WriteLine("Tablica przed sortowaniem:");
             WyswietlTablice(tablica);
 
-            SortowanieOdNajwiekszego(tablica);
+            SortujOdNajwiekszego(tablica);
 
             Console.WriteLine("\nTablica po sortowaniu:");
             WyswietlTablice(tablica);
@@ -356,10 +356,10 @@ namespace cwiczenia5
         {
             //Zadanie51();
             //Zadanie52();
-            //Zadanie53();
+            Zadanie53();
             //Zadanie54();
             //Zadanie55();
-            Zadanie56();
+            //Zadanie56();
         }
 
     }
